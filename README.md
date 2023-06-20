@@ -8,4 +8,9 @@ Anschließend die Konsole öffnen und zu dem Order *.../Client_Server_Applicatio
 Nun mittels `java -jar Server.jar` den Server starten. Jetzt kannst du noch bis zu drei weitere Konsolenfenster öffnen und jeweils einen Client starten mittels `java -jar Client.jar`. 
 Um einen Client auszuloggen einfach "quit" eingeben. 
 
+### Troubleshoot
+Wenn der folgende Fehler auftaucht `Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.net.ServerSocket.close()" because "this.server" is null
+	at Server.Server.<init>(Server.java:29)
+	at Server.ServerMain.main(ServerMain.java:13)`, dann ist der Port 4001 bei Dir höchstwahrscheinlich belegt. Sobald Du einen anderen Port gewählt und nochmal gebaut hast (oder den Port 4001 freigegeben hast), sollte alles einwandfrei funktionieren. 
+
 Viel Spaß!
